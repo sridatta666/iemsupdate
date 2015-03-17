@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration> 
+      
+  <session-factory>
+    <!-- Database connection settings -->
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="connection.url">jdbc:mysql://172.18.0.2:3306/hari</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">root</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>      
+    <property name="show_sql">true</property>
+     
+<mapping class="com.iems.entity.Employee"/>
+<mapping class="com.iems.entity.Profile"/>
+<mapping class="com.iems.entity.Emp_Skills"/>
+<mapping class="com.iems.entity.Education"/>
+<mapping class="com.iems.entity.Experience"/>
+<mapping class="com.iems.entity.SkillsEntity"/>
+<mapping class="com.iems.entity.DepartmentEntity"/>
+<mapping class="com.iems.entity.DesignationEntity"/>
+  </session-factory>
+</hibernate-configuration>
