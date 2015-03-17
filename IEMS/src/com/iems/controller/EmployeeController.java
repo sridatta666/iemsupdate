@@ -92,14 +92,20 @@ public class EmployeeController
 	public ModelAndView addskills(ModelMap modelmap,HttpServletRequest req,@ModelAttribute("eid")int eid){
 	EmployeeModel model=new EmployeeModel();
 		String[] skillidString=req.getParameterValues("skill");
-	int[] skillids=new int[skillidString.length];
+	String skillString="";
+		for (String string : skillidString) {
+		skillString=skillString+string;
+	}
+		System.out.println(skillString);
+		int[] skillids=new int[skillidString.length];
+	
 	for (int i=0;i<skillidString.length;i++) {
 	    
 		skillids[i]=Integer.parseInt(skillidString[i]);
 	
 	}	
 	
-	model.addSkillToEmployee(eid,skillids);
+	//model.addSkillToEmployee(eid,skillids);
 
 	//List<String> names=model.getEmployeeSkillNames(eid);
 	//System.out.println(names.get(0));

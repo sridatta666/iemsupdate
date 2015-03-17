@@ -60,7 +60,7 @@ public class EmployeeModel {
         }
 		public List getEid(String userid){
 			EmployeeDao dao=new EmployeeDao();
-			String queryString="select eid from profiledetails1 where userid='"+userid+"'";
+			String queryString="select eid from profiledetails where userid='"+userid+"'";
 			return (List) dao.listSQLQuery(queryString);
 			}
 
@@ -88,13 +88,13 @@ public class EmployeeModel {
 			return (List<Education>)empdao.listQuery(queryString);  
 			
 		}
-		public List<String> getEmployeeSkillNames(int eid){
-			String queryString="SELECT skills.skillname FROM skills INNER JOIN emp_skill ON skills.skillid=emp_skill.skillid where emp_skill.eid="+eid;
-			EmployeeDao empdao=new EmployeeDao();
-			
-			return (List<String>)empdao.listSQLQuery(queryString);  
-			
-		}
+//		public List<String> getEmployeeSkillNames(int eid){
+//			String queryString="SELECT skills.skillname FROM skills INNER JOIN emp_skill ON skills.skillid=emp_skill.skillid where emp_skill.eid="+eid;
+//			EmployeeDao empdao=new EmployeeDao();
+//			
+//			return (List<String>)empdao.listSQLQuery(queryString);  
+//			
+//		}
 		
 		
 		public List<Education> getEducationListbycolumn(int eid,int columnid){

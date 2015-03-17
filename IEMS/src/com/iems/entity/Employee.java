@@ -31,8 +31,15 @@ public class Employee
 	String photo;
 	@Column(name="empresume")
 	String empResume;
+	@Column(name="skillid")
+	String skillid;
 	
-	
+	public String getSkillid() {
+		return skillid;
+	}
+	public void setSkillid(String skillid) {
+		this.skillid = skillid;
+	}
 	public String getSummary() {
 		return summary;
 	}
